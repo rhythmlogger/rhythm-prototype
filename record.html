@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: content-box;
+            border-collapse: collapse;
+        }
+
+        html {
+            width: 1200px;
+            height: 900px;
+            display: flex;
+        }
+
+        .line {
+            width: 50px;
+            height: 600px;
+            border: 1px solid black;
+        }
+
+        #line-1-a {
+            left: 0;
+            position: absolute;
+        }
+
+        #line-1-s {
+            left: 50px;
+            position: absolute;
+        }
+
+        #line-1-d {
+            left: 100px;
+            position: absolute;
+        }
+
+        #line-1-j {
+            left: 150px;
+            position: absolute;
+        }
+
+        #line-1-k {
+            left: 200px;
+            position: absolute;
+        }
+
+        #line-1-l {
+            left: 250px;
+            position: absolute;
+        }
+
+        #line-2-a {
+            left: 0;
+            position: absolute;
+        }
+
+        #line-2-s {
+            left: 50px;
+            position: absolute;
+        }
+
+        #line-2-d {
+            left: 100px;
+            position: absolute;
+        }
+
+        #line-2-j {
+            left: 150px;
+            position: absolute;
+        }
+
+        #line-2-k {
+            left: 200px;
+            position: absolute;
+        }
+
+        #line-2-l {
+            left: 250px;
+            position: absolute;
+        }
+
+        .main {
+            left: 25px;
+            top: 25px;
+            width: 350px;
+            height: 900px;
+            background-color: white;
+            border: 5px solid black;
+            /* border-radius: 10px; */
+            display: inline-block;
+            position: relative;
+        }
+
+        .line-box {
+            width: 300px;
+            height: 600px;
+            top: 25px;
+            /* border-radius: 10px; */
+            border: solid 5px black;
+            left: 25px;
+            position: absolute;
+        }
+
+        .acc {
+            text-align: center;
+            color: rgba(35, 35, 35, 0.8);
+            font-weight: 900;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 24px;
+            width: 300px;
+            top: 400px;
+            left: 25px;
+            position: absolute;
+        }
+
+
+        .key {
+            width: 50px;
+            line-height: 60px;
+            text-align: center;
+            font-weight: 900;
+            height: 60px;
+            border: 5px solid black;
+            /* border-radius: 25px; */
+            box-sizing: border-box;
+        }
+
+        #key-1-a {
+            left: 0;
+            position: absolute;
+        }
+
+        #key-1-s {
+            left: 50px;
+            background-color: skyblue;
+            position: absolute;
+        }
+
+        #key-1-d {
+            left: 100px;
+            position: absolute;
+        }
+
+        #key-1-j {
+            left: 150px;
+            position: absolute;
+        }
+
+        #key-1-k {
+            left: 200px;
+            position: absolute;
+            background-color: skyblue;
+        }
+
+        #key-1-l {
+            left: 250px;
+            position: absolute;
+        }
+
+        #key-2-a {
+            left: 0;
+            position: absolute;
+        }
+
+        #key-2-s {
+            left: 50px;
+            background-color: skyblue;
+            position: absolute;
+        }
+
+        #key-2-d {
+            left: 100px;
+            position: absolute;
+        }
+
+        #key-2-j {
+            left: 150px;
+            position: absolute;
+        }
+
+        #key-2-k {
+            left: 200px;
+            position: absolute;
+            background-color: skyblue;
+        }
+
+        #key-2-l {
+            left: 250px;
+            position: absolute;
+        }
+
+        .key-box {
+            left: 25px;
+            bottom: 250px;
+            position: absolute;
+        }
+
+
+        .white-note {
+            top: -15px;
+            width: 50px;
+            height: 15px;
+            /* border-radius: 10px; */
+            background-color: white;
+            border: 5px solid black;
+            display: inline-block;
+            animation: linear none 2s down;
+            position: absolute;
+            box-sizing: border-box;
+            visibility: hidden;
+        }
+
+        @keyframes down {
+            0% {
+                visibility: hidden;
+                top: 0%;
+            }
+
+            10% {
+                visibility: visible;
+            }
+
+            100% {
+                top: 600px;
+            }
+
+        }
+
+        @keyframes up {
+            0% {
+                visibility: hidden;
+                top: 600px;
+            }
+
+            10% {
+                visibility: visible;
+            }
+
+            100% {
+                top: 0%;
+            }
+
+        }
+
+        .down {
+            animation: linear none 2s down;
+            background-color: white;
+        }
+
+        .up {
+            animation: linear none 2s up;
+        }
+
+        .blue-note {
+            top: -15px;
+            width: 50px;
+            height: 15px;
+            position: absolute;
+            /* border-radius: 10px; */
+            background-color: skyblue;
+            border: 5px solid black;
+            display: inline-block;
+            animation: linear none 2s down;
+            box-sizing: border-box;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="line-box">
+            <div id='line-1-a' class="line"></div>
+            <div id='line-1-s' class="line"></div>
+            <div id='line-1-d' class="line"></div>
+            <div id='line-1-j' class="line"></div>
+            <div id='line-1-k' class="line"></div>
+            <div id='line-1-l' class="line"></div>
+        </div>
+        <div class="key-box">
+            <div id='key-1-a' class="key">a</div>
+            <div id='key-1-s' class="key">s</div>
+            <div id='key-1-d' class="key">d</div>
+            <div id='key-1-j' class="key">j</div>
+            <div id='key-1-k' class="key">k</div>
+            <div id='key-1-l' class="key">l</div>
+        </div>
+    </div>
+    <audio src="music.mp3" controls id="audio" preload="auto"></audio>
+    <textarea id="track-log" style="position:absolute;bottom:0;right:0;width:50%;height:100%;">
+
+    </textarea>
+    <script>
+        function newNote(key, timeStamp, direction) {
+            setTimeout(function (e) {
+                let note = document.createElement('div');
+                let lineElement;
+                if (direction == 'up') {
+                    note.className = 'white-note' + ` ${direction}`;
+                    lineElement = document.getElementById(`line-1-${key}`);
+                }
+                lineElement.append(note);
+            }, timeStamp)
+        };
+        setTimeout(function(){
+            let audio = document.getElementById('audio');
+            audio.play();
+        },2000)
+        document.body.addEventListener('keydown', function (e) {
+
+            newNote(e.key, 0, 'up');
+            console.log(e.timestamp);
+            let trackLog = document.getElementById('track-log');
+            trackLog.innerHTML += `{ key : '${e.key}' , timeStamp : ${e.timeStamp}},` + "\n";
+        });
+    </script>
+</body>
+
+</html>

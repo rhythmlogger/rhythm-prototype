@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>key converter</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let keyMap = new Map();
+    keyMap.set('a', 0);
+    keyMap.set('s', 1);
+    keyMap.set('d', 2);
+    keyMap.set('j', 3);
+    keyMap.set('k', 4);
+    keyMap.set('l', 5);
+    let list = [
+
+        { key: 'a', timeStamp: 2408.699999999255 },
+        { key: 'j', timeStamp: 2641.199999999255 },
+        { key: 'a', timeStamp: 2828.5 },
+        { key: 'a', timeStamp: 3194.5999999996275 },
+        { key: 'j', timeStamp: 3369.699999999255 },
+        { key: 's', timeStamp: 3746.800000000745 },
+        { key: 'j', timeStamp: 4185.800000000745 },
+        { key: 's', timeStamp: 4396.5999999996275 },
+        { key: 's', timeStamp: 4840.5 },
+        { key: 'j', timeStamp: 5022.699999999255 },
+        { key: 'a', timeStamp: 5375.300000000745 },
+        { key: 'j', timeStamp: 5798 },
+        { key: 'a', timeStamp: 5981.800000000745 },
+        { key: 'a', timeStamp: 6405.4000000003725 },
+        { key: 'j', timeStamp: 6596.699999999255 },
+        { key: 's', timeStamp: 6953.800000000745 },
+        { key: 'j', timeStamp: 7392.5 },
+        { key: 's', timeStamp: 7598 },
+        { key: 's', timeStamp: 8027.9000000003725 },
+        { key: 'j', timeStamp: 8273.599999999627 },
+        { key: 'a', timeStamp: 8620.199999999255 },
+        { key: 'j', timeStamp: 9001.800000000745 },
+        { key: 's', timeStamp: 9795.800000000745 },
+        { key: 'j', timeStamp: 9997.900000000373 },
+        { key: 'a', timeStamp: 10202.099999999627 },
+        { key: 'a', timeStamp: 10398.5 },
+        { key: 'k', timeStamp: 10617.900000000373 },
+        { key: 's', timeStamp: 11444.599999999627 },
+        { key: 'd', timeStamp: 11857.099999999627 },
+        { key: 'j', timeStamp: 12025.800000000745 },
+        { key: 'j', timeStamp: 12258.699999999255 },
+        { key: 'd', timeStamp: 13021.099999999627 },
+        { key: 'j', timeStamp: 13203.099999999627 },
+        { key: 'k', timeStamp: 13390.5 },
+        { key: 'j', timeStamp: 13583.599999999627 },
+        { key: 'l', timeStamp: 13797.900000000373 },
+        { key: 'a', timeStamp: 15025.199999999255 },
+        { key: 'j', timeStamp: 15589.099999999627 },
+        { key: 's', timeStamp: 15777.800000000745 },
+        { key: 'k', timeStamp: 16015.300000000745 },
+        { key: 'j', timeStamp: 16194.599999999627 },
+        { key: 'k', timeStamp: 16424.300000000745 },
+        { key: 'j', timeStamp: 16613.199999999255 },
+        { key: 'l', timeStamp: 16992.199999999255 },
+        { key: 'k', timeStamp: 17412.900000000373 },
+        { key: 'd', timeStamp: 17793.5 },
+        { key: 's', timeStamp: 18168.699999999255 },
+        { key: 'd', timeStamp: 18730.400000000373 },
+        { key: 'j', timeStamp: 18985.699999999255 },
+        { key: 'a', timeStamp: 19345.300000000745 },
+        { key: 'j', timeStamp: 19649.900000000373 },
+        { key: 's', timeStamp: 19886.5 },
+        { key: 'd', timeStamp: 20214.099999999627 },
+        { key: 'j', timeStamp: 20398.900000000373 },
+        { key: 'k', timeStamp: 20601.699999999255 },
+        { key: 'l', timeStamp: 20978.5 },
+        { key: 'k', timeStamp: 21182 },
+        { key: 'j', timeStamp: 21376.5 },
+        { key: 'd', timeStamp: 21773.400000000373 },
+        { key: 'k', timeStamp: 21957.400000000373 },
+        { key: 's', timeStamp: 22192.900000000373 },
+        { key: 'j', timeStamp: 22398.800000000745 },
+        { key: 'd', timeStamp: 22581.099999999627 },
+        { key: 'k', timeStamp: 22802.400000000373 },
+        { key: 'a', timeStamp: 22991.5 },
+        { key: 's', timeStamp: 23385.099999999627 },
+        { key: 'd', timeStamp: 23787.599999999627 },
+        { key: 'j', timeStamp: 24193.800000000745 },
+        { key: 'l', timeStamp: 24600.800000000745 },
+        { key: 'k', timeStamp: 25164.599999999627 },
+        { key: 'l', timeStamp: 25395.599999999627 },
+        { key: 'l', timeStamp: 25732.699999999255 },
+        { key: 'k', timeStamp: 26001.900000000373 },
+        { key: 'l', timeStamp: 26173.300000000745 },
+        { key: 'k', timeStamp: 26563.699999999255 },
+        { key: 'j', timeStamp: 26765.400000000373 },
+        { key: 'k', timeStamp: 27001.900000000373 },
+        { key: 'd', timeStamp: 27422.199999999255 },
+        { key: 'j', timeStamp: 27651.599999999627 },
+        { key: 's', timeStamp: 27891.599999999627 },
+        { key: 'd', timeStamp: 28953.300000000745 },
+        { key: 'j', timeStamp: 29193.800000000745 },
+        { key: 's', timeStamp: 29781.400000000373 },
+        { key: 'j', timeStamp: 30001 },
+        { key: 'a', timeStamp: 30585.599999999627 },
+        { key: 'a', timeStamp: 30812.300000000745 },
+        { key: 'a', timeStamp: 31944.400000000373 },
+        { key: 's', timeStamp: 32167.699999999255 },
+        { key: 'd', timeStamp: 32405.900000000373 },
+        { key: 'j', timeStamp: 32653.699999999255 },
+        { key: 'd', timeStamp: 33034.09999999963 },
+        { key: 'j', timeStamp: 33245.199999999255 },
+        { key: 'j', timeStamp: 33770.699999999255 },
+        { key: 'k', timeStamp: 34002.699999999255 },
+        { key: 'l', timeStamp: 35308.90000000037 },
+        { key: 'k', timeStamp: 35587.59999999963 },
+        { key: 'k', timeStamp: 36213.40000000037 },
+        { key: 'j', timeStamp: 36429.300000000745 },
+        { key: 'd', timeStamp: 37045.5 },
+        { key: 's', timeStamp: 37286.40000000037 },
+        { key: 's', timeStamp: 38369.90000000037 },
+        { key: 'd', timeStamp: 38563.59999999963 },
+        { key: 'j', timeStamp: 38829.699999999255 },
+        { key: 's', timeStamp: 39066.699999999255 },
+        { key: 'd', timeStamp: 39427.300000000745 },
+        { key: 'j', timeStamp: 39754.800000000745 },
+        { key: 'j', timeStamp: 40015.699999999255 },
+        { key: 'k', timeStamp: 40117.40000000037 },
+        { key: 'j', timeStamp: 40200.699999999255 },
+        { key: 'd', timeStamp: 40244.09999999963 },
+        { key: 'j', timeStamp: 40737.199999999255 },
+        { key: 'k', timeStamp: 41788.199999999255 },
+        { key: 'j', timeStamp: 42000.90000000037 },
+        { key: 'd', timeStamp: 42580.5 },
+        { key: 'l', timeStamp: 42842.5 },
+        { key: 's', timeStamp: 43404.199999999255 },
+        { key: 'd', timeStamp: 43631.5 },
+        { key: 'a', timeStamp: 44699.59999999963 },
+        { key: 's', timeStamp: 44930.199999999255 },
+        { key: 'd', timeStamp: 45145.699999999255 },
+        { key: 'j', timeStamp: 45401.800000000745 },
+        { key: 'd', timeStamp: 45765.199999999255 },
+        { key: 'j', timeStamp: 45957.5 },
+        { key: 'k', timeStamp: 46543.90000000037 },
+        { key: 'j', timeStamp: 46774.09999999963 },
+        { key: 'l', timeStamp: 48206 },
+        { key: 'k', timeStamp: 48450.90000000037 },
+        { key: 'j', timeStamp: 49019.699999999255 },
+        { key: 'k', timeStamp: 49241.5 },
+        { key: 'd', timeStamp: 49735.300000000745 },
+        { key: 's', timeStamp: 49973.300000000745 },
+        { key: 'a', timeStamp: 51029.5 },
+        { key: 's', timeStamp: 51274.59999999963 },
+        { key: 'd', timeStamp: 51445.800000000745 },
+        { key: 'j', timeStamp: 51806.699999999255 },
+        { key: 'd', timeStamp: 52155.199999999255 },
+        { key: 'j', timeStamp: 52493.59999999963 },
+        { key: 'j', timeStamp: 52796.5 },
+        { key: 'k', timeStamp: 52928.40000000037 },
+        { key: 'l', timeStamp: 53004.300000000745 },
+
+    ];
+    for (let i = 0; i < list.length; i++) {
+        let note = document.createElement('div');
+        note.innerHTML = `{ 'key' : ${keyMap.get(list[i].key)}, 'timeStamp' : ${list[i].timeStamp}},`;
+        document.body.appendChild(note);
+    }
+</script>
+
+</html>

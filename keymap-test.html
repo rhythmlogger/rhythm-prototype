@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keymap</title>
+</head>
+
+<body>
+    <script>
+        let track = [
+            { 'key': 0, 'timeStamp': 2408.699999999255 },
+            { 'key': 3, 'timeStamp': 2641.199999999255 },
+            { 'key': 0, 'timeStamp': 2828.5 },
+            { 'key': 0, 'timeStamp': 3194.5999999996275 },
+            { 'key': 3, 'timeStamp': 3369.699999999255 },
+            { 'key': 1, 'timeStamp': 3746.800000000745 },
+            { 'key': 3, 'timeStamp': 4185.800000000745 },
+            { 'key': 1, 'timeStamp': 4396.5999999996275 },
+            { 'key': 1, 'timeStamp': 4840.5 },
+            { 'key': 3, 'timeStamp': 5022.699999999255 },
+            { 'key': 0, 'timeStamp': 5375.300000000745 },
+            { 'key': 3, 'timeStamp': 5798 },
+            { 'key': 0, 'timeStamp': 5981.800000000745 },
+            { 'key': 0, 'timeStamp': 6405.4000000003725 },
+            { 'key': 3, 'timeStamp': 6596.699999999255 },
+            { 'key': 1, 'timeStamp': 6953.800000000745 },
+            { 'key': 3, 'timeStamp': 7392.5 },
+            { 'key': 1, 'timeStamp': 7598 },
+            { 'key': 1, 'timeStamp': 8027.9000000003725 },
+            { 'key': 3, 'timeStamp': 8273.599999999627 },
+            { 'key': 0, 'timeStamp': 8620.199999999255 },
+            { 'key': 3, 'timeStamp': 9001.800000000745 },
+            { 'key': 1, 'timeStamp': 9795.800000000745 },
+            { 'key': 3, 'timeStamp': 9997.900000000373 },
+            { 'key': 0, 'timeStamp': 10202.099999999627 },
+            { 'key': 0, 'timeStamp': 10398.5 },
+            { 'key': 4, 'timeStamp': 10617.900000000373 },
+            { 'key': 1, 'timeStamp': 11444.599999999627 },
+            { 'key': 2, 'timeStamp': 11857.099999999627 },
+            { 'key': 3, 'timeStamp': 12025.800000000745 },
+            { 'key': 3, 'timeStamp': 12258.699999999255 },
+            { 'key': 2, 'timeStamp': 13021.099999999627 },
+            { 'key': 3, 'timeStamp': 13203.099999999627 },
+            { 'key': 4, 'timeStamp': 13390.5 },
+            { 'key': 3, 'timeStamp': 13583.599999999627 },
+            { 'key': 5, 'timeStamp': 13797.900000000373 },
+            { 'key': 0, 'timeStamp': 15025.199999999255 },
+            { 'key': 3, 'timeStamp': 15589.099999999627 },
+            { 'key': 1, 'timeStamp': 15777.800000000745 },
+            { 'key': 4, 'timeStamp': 16015.300000000745 },
+            { 'key': 3, 'timeStamp': 16194.599999999627 },
+            { 'key': 4, 'timeStamp': 16424.300000000745 },
+            { 'key': 3, 'timeStamp': 16613.199999999255 },
+            { 'key': 5, 'timeStamp': 16992.199999999255 },
+            { 'key': 4, 'timeStamp': 17412.900000000373 },
+            { 'key': 2, 'timeStamp': 17793.5 },
+            { 'key': 1, 'timeStamp': 18168.699999999255 },
+            { 'key': 2, 'timeStamp': 18730.400000000373 },
+            { 'key': 3, 'timeStamp': 18985.699999999255 },
+            { 'key': 0, 'timeStamp': 19345.300000000745 },
+            { 'key': 3, 'timeStamp': 19649.900000000373 },
+            { 'key': 1, 'timeStamp': 19886.5 },
+            { 'key': 2, 'timeStamp': 20214.099999999627 },
+            { 'key': 3, 'timeStamp': 20398.900000000373 },
+            { 'key': 4, 'timeStamp': 20601.699999999255 },
+            { 'key': 5, 'timeStamp': 20978.5 },
+            { 'key': 4, 'timeStamp': 21182 },
+            { 'key': 3, 'timeStamp': 21376.5 },
+            { 'key': 2, 'timeStamp': 21773.400000000373 },
+            { 'key': 4, 'timeStamp': 21957.400000000373 },
+            { 'key': 1, 'timeStamp': 22192.900000000373 },
+            { 'key': 3, 'timeStamp': 22398.800000000745 },
+            { 'key': 2, 'timeStamp': 22581.099999999627 },
+            { 'key': 4, 'timeStamp': 22802.400000000373 },
+            { 'key': 0, 'timeStamp': 22991.5 },
+            { 'key': 1, 'timeStamp': 23385.099999999627 },
+            { 'key': 2, 'timeStamp': 23787.599999999627 },
+            { 'key': 3, 'timeStamp': 24193.800000000745 },
+            { 'key': 5, 'timeStamp': 24600.800000000745 },
+            { 'key': 4, 'timeStamp': 25164.599999999627 },
+            { 'key': 5, 'timeStamp': 25395.599999999627 },
+            { 'key': 5, 'timeStamp': 25732.699999999255 },
+            { 'key': 4, 'timeStamp': 26001.900000000373 },
+            { 'key': 5, 'timeStamp': 26173.300000000745 },
+            { 'key': 4, 'timeStamp': 26563.699999999255 },
+            { 'key': 3, 'timeStamp': 26765.400000000373 },
+            { 'key': 4, 'timeStamp': 27001.900000000373 },
+            { 'key': 2, 'timeStamp': 27422.199999999255 },
+            { 'key': 3, 'timeStamp': 27651.599999999627 },
+            { 'key': 1, 'timeStamp': 27891.599999999627 },
+            { 'key': 2, 'timeStamp': 28953.300000000745 },
+            { 'key': 3, 'timeStamp': 29193.800000000745 },
+            { 'key': 1, 'timeStamp': 29781.400000000373 },
+            { 'key': 3, 'timeStamp': 30001 },
+            { 'key': 0, 'timeStamp': 30585.599999999627 },
+            { 'key': 0, 'timeStamp': 30812.300000000745 },
+            { 'key': 0, 'timeStamp': 31944.400000000373 },
+            { 'key': 1, 'timeStamp': 32167.699999999255 },
+            { 'key': 2, 'timeStamp': 32405.900000000373 },
+            { 'key': 3, 'timeStamp': 32653.699999999255 },
+            { 'key': 2, 'timeStamp': 33034.09999999963 },
+            { 'key': 3, 'timeStamp': 33245.199999999255 },
+            { 'key': 3, 'timeStamp': 33770.699999999255 },
+            { 'key': 4, 'timeStamp': 34002.699999999255 },
+            { 'key': 5, 'timeStamp': 35308.90000000037 },
+            { 'key': 4, 'timeStamp': 35587.59999999963 },
+            { 'key': 4, 'timeStamp': 36213.40000000037 },
+            { 'key': 3, 'timeStamp': 36429.300000000745 },
+            { 'key': 2, 'timeStamp': 37045.5 },
+            { 'key': 1, 'timeStamp': 37286.40000000037 },
+            { 'key': 1, 'timeStamp': 38369.90000000037 },
+            { 'key': 2, 'timeStamp': 38563.59999999963 },
+            { 'key': 3, 'timeStamp': 38829.699999999255 },
+            { 'key': 1, 'timeStamp': 39066.699999999255 },
+            { 'key': 2, 'timeStamp': 39427.300000000745 },
+            { 'key': 3, 'timeStamp': 39754.800000000745 },
+            { 'key': 3, 'timeStamp': 40015.699999999255 },
+            { 'key': 4, 'timeStamp': 40117.40000000037 },
+            { 'key': 3, 'timeStamp': 40200.699999999255 },
+            { 'key': 2, 'timeStamp': 40244.09999999963 },
+            { 'key': 3, 'timeStamp': 40737.199999999255 },
+            { 'key': 4, 'timeStamp': 41788.199999999255 },
+            { 'key': 3, 'timeStamp': 42000.90000000037 },
+            { 'key': 2, 'timeStamp': 42580.5 },
+            { 'key': 5, 'timeStamp': 42842.5 },
+            { 'key': 1, 'timeStamp': 43404.199999999255 },
+            { 'key': 2, 'timeStamp': 43631.5 },
+            { 'key': 0, 'timeStamp': 44699.59999999963 },
+            { 'key': 1, 'timeStamp': 44930.199999999255 },
+            { 'key': 2, 'timeStamp': 45145.699999999255 },
+            { 'key': 3, 'timeStamp': 45401.800000000745 },
+            { 'key': 2, 'timeStamp': 45765.199999999255 },
+            { 'key': 3, 'timeStamp': 45957.5 },
+            { 'key': 4, 'timeStamp': 46543.90000000037 },
+            { 'key': 3, 'timeStamp': 46774.09999999963 },
+            { 'key': 5, 'timeStamp': 48206 },
+            { 'key': 4, 'timeStamp': 48450.90000000037 },
+            { 'key': 3, 'timeStamp': 49019.699999999255 },
+            { 'key': 4, 'timeStamp': 49241.5 },
+            { 'key': 2, 'timeStamp': 49735.300000000745 },
+            { 'key': 1, 'timeStamp': 49973.300000000745 },
+            { 'key': 0, 'timeStamp': 51029.5 },
+            { 'key': 1, 'timeStamp': 51274.59999999963 },
+            { 'key': 2, 'timeStamp': 51445.800000000745 },
+            { 'key': 3, 'timeStamp': 51806.699999999255 },
+            { 'key': 2, 'timeStamp': 52155.199999999255 },
+            { 'key': 3, 'timeStamp': 52493.59999999963 },
+            { 'key': 3, 'timeStamp': 52796.5 },
+            { 'key': 4, 'timeStamp': 52928.40000000037 },
+            { 'key': 5, 'timeStamp': 53004.300000000745 },
+        ];
+        let listA = [];
+        let listS = [];
+        let listD = [];
+        let listJ = [];
+        let listK = [];
+        let listL = [];
+        let list = [listA, listS, listD, listJ, listK, listL];
+        function test() {
+            for (let i = 0; i < track.length; i++) {
+                if (track[i].key == 0) {
+                    list[0].push(track[i]);
+                } else if (track[i].key == 1) {
+                    list[1].push(track[i]);
+                } else if (track[i].key == 2) {
+                    list[2].push(track[i]);
+                } else if (track[i].key == 3) {
+                    list[3].push(track[i]);
+                } else if (track[i].key == 4) {
+                    list[4].push(track[i]);
+                } else if (track[i].key == 5) {
+                    list[5].push(track[i]);
+                }
+            }
+        }
+        function search(list, timeStamp) {
+            for (let i = 0; i < list.length; i++) {
+                if (list[i].timeStamp >= timeStamp - 500 && list[i].timeStamp <= timeStamp + 500) {
+                    console.log('found');
+                    break;
+                } else {
+                    console.log('not found');
+                }
+            }
+        }
+        test();
+        let keyMap = new Map();
+        keyMap.set('a', 0);
+        keyMap.set('s', 1);
+        keyMap.set('d', 2);
+        keyMap.set('j', 3);
+        keyMap.set('k', 4);
+        keyMap.set('l', 5);
+        document.body.addEventListener('keydown', function (e) {
+            let key = keyMap.get(e.key);
+            if (undefined != key) {
+                search(list[key], e.timeStamp);
+            }
+        })
+    </script>
+</body>
+
+</html>

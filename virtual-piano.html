@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rhythm-type</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js">
+    </script>
+    <style>
+        #cover,
+        #main {
+            float: left;
+            border: 1px solid black;
+            width: 400px;
+            height: auto;
+        }
+
+        @keyframes effect {
+            0% {
+                background-color: white;
+            }
+
+            70% {
+                background-color: white;
+            }
+
+            90% {
+                background-color: black;
+            }
+
+            100% {
+                background-color: white;
+            }
+        }
+
+        .active {
+            animation: 0.2s effect linear;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+
+    </div>
+    <div id="cover">
+
+    </div>
+
+    <script>
+        let list = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'];
+        let code = ['c', 'd', 'e', 'f', 'g', 'a', 'b'];
+        let keyMap = new Map();
+        let start = false;
+        for (var i = 0; i < list.length; i++) {
+            keyMap.set(list[i], code[i % 7] + (parseInt(i / 7) + 2));
+        }
+        let index = 0;
+        let str = 'tuoash/tuoash/tuoash/tuoash/ruoash/ruoash/ruoash/ruoash/euoash/euoash/euoash/euoash/wuoash/wuoash/wuoash';
+        const synth = new Tone.PolySynth(Tone.Synth).toDestination();
+        const psynth = new Tone.AMSynth().toDestination();
+        for (var i = 0; i < str.length; i++) {
+            if (str.charAt(i) == '/') {
+                main.innerHTML += `<span><br></span>`
+            } else {
+                main.innerHTML += `<span class='note'>${str.charAt(i)}</span>`
+            }
+        }
+        document.body.addEventListener('keydown', function (e) {
+            if (start == false) {
+                run();
+                start = true;
+            }
+            let cover = document.getElementById('cover');
+            let note = document.createElement('div');
+            note.className = 'active';
+            note.innerHTML = e.key;
+            cover.appendChild(note);
+            psynth.triggerAttackRelease(keyMap.get(e.key), "8n");
+            index++;
+        })
+        let a = 0;
+        function run() {
+            let id = setInterval(function () {
+                let str = 'tuoashtuoashtuoashtuoashruoashruoashruoashruoasheuoasheuoasheuoasheuoashwuoashwuoashwuoash';
+
+                let tds = document.getElementsByClassName('note');
+                tds[a % tds.length].style = `background-color:black;color:white;`;
+                //play a middle 'C' for the duration of an 8th note
+                synth.triggerAttackRelease(keyMap.get(str[a]), "32n");
+                a++;
+                if (a == str.length) {
+                    clearInterval(id);
+                }
+                if (a % 6 == 0) {
+                    let cover = document.getElementById('cover');
+                    let empty = document.getElementById();
+                    cover.innerHTML += "<br>";
+                }
+            }, 200);
+
+        }
+    </script>
+</body>
+
+</html>

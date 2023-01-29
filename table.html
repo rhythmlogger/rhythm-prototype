@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rhythm-table</title>
+    <style>
+        td:hover {
+            background-color: black;
+            color: white;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            border-collapse: collapse;
+        }
+
+        #container {
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+            overflow-y: scroll;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        td {
+            width: 100px;
+            height: 20px;
+            border: 1px solid black;
+        }
+
+
+
+        .true {
+            background-color: black;
+            border: 1px solid white;
+        }
+
+        .false {
+            background-color: white;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <table>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+    <script>
+        let tbody = document.getElementById('tbody');
+        let i = 0;
+
+        const synth = new Tone.AMSynth().toDestination();
+        let notes = [true, true, true, true];
+        setInterval(function () {
+            let tbody = document.getElementById('tbody');
+            let tr = document.createElement('tr');
+
+            if (i < 16) {
+
+
+                for (var j = 0; j < 4; j++) {
+
+                    let td = document.createElement('td');
+                    td.innerHTML = `${i * 100}`;
+                    tr.appendChild(td);
+                }
+                i++;
+            } else {
+                let td0 = document.createElement('td');
+                td0.className = notes[0];
+                let td1 = document.createElement('td');
+                td1.className = notes[1];
+                let td2 = document.createElement('td');
+                td2.className = notes[2];
+                let td3 = document.createElement('td');
+                td3.className = notes[3];
+                tr.appendChild(td0);
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+            }
+            tbody.prepend(tr);
+            i++;
+        }, 125);
+        setInterval(function () {
+            notes[0] = parseInt(Math.random() * 10) % 2 == 0 ? true : false;
+            notes[1] = parseInt(Math.random() * 10) % 2 == 0 ? true : false;
+            notes[2] = parseInt(Math.random() * 10) % 2 == 0 ? true : false;
+            notes[3] = parseInt(Math.random() * 10) % 2 == 0 ? true : false;
+        }, 250)
+    </script>
+</body>
+
+</html>
